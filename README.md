@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Anypic
 
 Anypic is the easiest way to share photos with your friends. Get the app and share your fun photos with the world. [Anypic](https://anypic.org) is fully powered by [Parse](https://parse.com). 
@@ -72,3 +73,10 @@ Anypic uses media queries to present different layouts on iPad, iOS and various 
 ## Cloud Code
 
 Add your Parse app id and master key to `Anypic-iOS/CloudCode/config/global.json`, then type `parse deploy` from the command line at `Anypic-cloud`. See the [Cloud Code Guide](https://parse.com/docs/cloud_code_guide#clt) for more information about the `parse` CLI.
+=======
+Strictly-Selfies
+================
+
+## Parse
+F0vdxARR7sA9rCKS4wKKmQXeslfXrumzt2EpPkNR<br>I3pLCAUjEVaXeZ8qyhSFl5Su85fjws1m0R2Oh3zV
+>>>>>>> FETCH_HEAD
