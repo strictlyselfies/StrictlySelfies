@@ -24,6 +24,9 @@
 /// Heart-shaped like button
 @property (nonatomic, strong, readonly) UIButton *likeButton;
 
+/// Warning Report button
+@property (nonatomic, strong, readonly) UIButton *warningButton;
+
 /*! @name Delegate */
 @property (nonatomic, strong) id<PAPPhotoDetailsHeaderViewDelegate> delegate;
 
@@ -48,5 +51,5 @@
  @param user the PFUser for the photograper
  */
 - (void)photoDetailsHeaderView:(PAPPhotoDetailsHeaderView *)headerView didTapUserButton:(UIButton *)button user:(PFUser *)user;
-
+- (void)promptAlert;
 @end

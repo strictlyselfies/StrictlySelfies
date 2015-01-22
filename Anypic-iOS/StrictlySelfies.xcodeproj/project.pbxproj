@@ -126,10 +126,13 @@
 		C4F102E7156C58570061BC3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F102E5156C58570061BC3E /* InfoPlist.strings */; };
 		C4F102EF156C58E00061BC3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F102EC156C58E00061BC3E /* main.m */; };
 		D3074D6A1A3A4F6700C98E50 /* LogoNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D691A3A4F6700C98E50 /* LogoNavigationBar@2x.png */; };
-		D3074D6C1A3A508500C98E50 /* backgroundNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6B1A3A508500C98E50 /* backgroundNavigationBar@2x.png */; };
 		D3074D6F1A3A514C00C98E50 /* BackgroundLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */; };
 		D3074D701A3A514C00C98E50 /* BackgroundLogin-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */; };
 		D3074D721A3A527A00C98E50 /* BackgroundTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */; };
+		D34BF5F51A705F0900926C27 /* backgroundNavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5F31A705F0900926C27 /* backgroundNavigationBar.png */; };
+		D34BF5F61A705F0900926C27 /* backgroundNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */; };
+		D34BF5FD1A7064A700926C27 /* ButtonWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5FB1A7064A700926C27 /* ButtonWarning.png */; };
+		D34BF5FE1A7064A700926C27 /* ButtonWarningSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5FC1A7064A700926C27 /* ButtonWarningSelected.png */; };
 		D36939B81A3FF7B500B16628 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36939B71A3FF7B500B16628 /* Images.xcassets */; };
 		D36939BA1A40EB6400B16628 /* IconHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36939B91A40EB6400B16628 /* IconHome@2x.png */; };
 		D36939BC1A40EB6C00B16628 /* IconHomeSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36939BB1A40EB6C00B16628 /* IconHomeSelected@2x.png */; };
@@ -305,10 +308,13 @@
 		C4F102EC156C58E00061BC3E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		C4F102ED156C58E00061BC3E /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D3074D691A3A4F6700C98E50 /* LogoNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoNavigationBar@2x.png"; sourceTree = "<group>"; };
-		D3074D6B1A3A508500C98E50 /* backgroundNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundNavigationBar@2x.png"; sourceTree = "<group>"; };
 		D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin@2x.png"; sourceTree = "<group>"; };
 		D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin-568h@2x.png"; sourceTree = "<group>"; };
 		D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTabBar@2x.png"; sourceTree = "<group>"; };
+		D34BF5F31A705F0900926C27 /* backgroundNavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundNavigationBar.png; sourceTree = "<group>"; };
+		D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundNavigationBar@2x.png"; sourceTree = "<group>"; };
+		D34BF5FB1A7064A700926C27 /* ButtonWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonWarning.png; sourceTree = "<group>"; };
+		D34BF5FC1A7064A700926C27 /* ButtonWarningSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonWarningSelected.png; sourceTree = "<group>"; };
 		D36939B71A3FF7B500B16628 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Anypic/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		D36939B91A40EB6400B16628 /* IconHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconHome@2x.png"; sourceTree = "<group>"; };
 		D36939BB1A40EB6C00B16628 /* IconHomeSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconHomeSelected@2x.png"; sourceTree = "<group>"; };
@@ -469,9 +475,10 @@
 				C4BE671C157FC7E200A291C2 /* BackgroundLeather@2x.png */,
 				D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */,
 				D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */,
+				D34BF5F31A705F0900926C27 /* backgroundNavigationBar.png */,
+				D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */,
 				C4BE6721157FC7E300A291C2 /* BackgroundNewActivity.png */,
 				C4BE6722157FC7E300A291C2 /* BackgroundNewActivity@2x.png */,
-				D3074D6B1A3A508500C98E50 /* backgroundNavigationBar@2x.png */,
 				D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */,
 				C4BE6725157FC7E400A291C2 /* BackgroundTabBarItemSelected.png */,
 				C4BE6726157FC7E500A291C2 /* BackgroundTabBarItemSelected@2x.png */,
@@ -493,6 +500,8 @@
 				C4BE673C157FC7EA00A291C2 /* ButtonImageSettings@2x.png */,
 				C4BE673D157FC7EB00A291C2 /* ButtonImageSettingsSelected.png */,
 				C4BE673E157FC7EB00A291C2 /* ButtonImageSettingsSelected@2x.png */,
+				D34BF5FB1A7064A700926C27 /* ButtonWarning.png */,
+				D34BF5FC1A7064A700926C27 /* ButtonWarningSelected.png */,
 				C4BE673F157FC7EB00A291C2 /* ButtonLike.png */,
 				C4BE6740157FC7EC00A291C2 /* ButtonLike@2x.png */,
 				C4BE6741157FC7EC00A291C2 /* ButtonLikeSelected.png */,
@@ -785,7 +794,7 @@
 				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					09ABC06C13A1D52D009C3FCF = {
-						DevelopmentTeam = RA8J538UUR;
+						DevelopmentTeam = ZZRJ9L6W3L;
 					};
 				};
 			};
@@ -815,6 +824,7 @@
 				D36939C81A40ED1000B16628 /* CellLoadMore@2x.png in Resources */,
 				C4F102E2156C58440061BC3E /* Entitlements.plist in Resources */,
 				C4F102E7156C58570061BC3E /* InfoPlist.strings in Resources */,
+				D34BF5F61A705F0900926C27 /* backgroundNavigationBar@2x.png in Resources */,
 				C4BE66FB157FC52F00A291C2 /* ShadowProfilePicture-29.png in Resources */,
 				C4BE66FC157FC52F00A291C2 /* ShadowProfilePicture-29@2x.png in Resources */,
 				D3074D6F1A3A514C00C98E50 /* BackgroundLogin@2x.png in Resources */,
@@ -856,6 +866,7 @@
 				C4BE6795157FC7F700A291C2 /* ButtonImageSettingsSelected.png in Resources */,
 				D36939B81A3FF7B500B16628 /* Images.xcassets in Resources */,
 				C4BE6796157FC7F700A291C2 /* ButtonImageSettingsSelected@2x.png in Resources */,
+				D34BF5FD1A7064A700926C27 /* ButtonWarning.png in Resources */,
 				C4BE6797157FC7F700A291C2 /* ButtonLike.png in Resources */,
 				C4BE6798157FC7F700A291C2 /* ButtonLike@2x.png in Resources */,
 				D36939BE1A40EC0000B16628 /* ButtonCamera@2x.png in Resources */,
@@ -883,7 +894,7 @@
 				C4BE67AE157FC7F700A291C2 /* IconPics@2x.png in Resources */,
 				C4BE67AF157FC7F700A291C2 /* IconTick.png in Resources */,
 				C4BE67B0157FC7F700A291C2 /* IconTick@2x.png in Resources */,
-				D3074D6C1A3A508500C98E50 /* backgroundNavigationBar@2x.png in Resources */,
+				D34BF5F51A705F0900926C27 /* backgroundNavigationBar.png in Resources */,
 				C4BE67B1157FC7F700A291C2 /* IconTickSelected.png in Resources */,
 				C4BE67B2157FC7F700A291C2 /* IconTickSelected@2x.png in Resources */,
 				C4BE67B9157FC7F700A291C2 /* ProfilePictureStroke.png in Resources */,
@@ -896,6 +907,7 @@
 				C4BE67BF157FC7F700A291C2 /* SeparatorTimelineDark.png in Resources */,
 				C4BE67C0157FC7F700A291C2 /* SeparatorTimelineDark@2x.png in Resources */,
 				D36939BC1A40EB6C00B16628 /* IconHomeSelected@2x.png in Resources */,
+				D34BF5FE1A7064A700926C27 /* ButtonWarningSelected.png in Resources */,
 				C4BE67C7157FC8F600A291C2 /* TextFieldComment.png in Resources */,
 				C4BE67C8157FC8F600A291C2 /* TextFieldComment@2x.png in Resources */,
 				C463AF9015BF1DAF007F834E /* AvatarPlaceholder.png in Resources */,
@@ -1030,6 +1042,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1047,6 +1060,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1059,6 +1073,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1071,6 +1086,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1113,6 +1129,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1126,6 +1143,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1168,6 +1186,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1181,6 +1200,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

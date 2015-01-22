@@ -290,6 +290,38 @@ static const CGFloat kPAPCellInsetWidth = 20.0f;
 
 #pragma mark - PAPPhotoDetailsHeaderViewDelegate
 
+- (void)promptAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"REPORT INAPPROPRIATE" message:@"Would you like to report this as inappropriate content?  This selfie will be reviewed by StrictlySelfies staff." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"REPORT INAPPROPRIATE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+        
+        PFObject *inappropriate = [PFObject objectWithClassName:kPAPActivityClassKey];
+        [inappropriate setObject:@"REPORTED AS INAPPROPRIATE" forKey:kPAPActivityContentKey];
+        [inappropriate setObject:[self.photo objectForKey:kPAPPhotoUserKey] forKey:kPAPActivityToUserKey]; // Set toUser
+        [inappropriate setObject:[PFUser currentUser] forKey:kPAPActivityFromUserKey]; // Set fromUser
+        [inappropriate setObject:kPAPActivityTypeReportInappropriate forKey:kPAPActivityTypeKey];
+        [inappropriate setObject:self.photo forKey:kPAPActivityPhotoKey];
+        
+        PFACL *ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+        [ACL setPublicReadAccess:YES];
+        [ACL setWriteAccess:YES forUser:[self.photo objectForKey:kPAPPhotoUserKey]];
+        inappropriate.ACL = ACL;
+        
+        [inappropriate saveEventually:^(BOOL succeeded, NSError *error) {
+
+        }];
+    }];
+    [alert addAction:report];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Nevermind" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 -(void)photoDetailsHeaderView:(PAPPhotoDetailsHeaderView *)headerView didTapUserButton:(UIButton *)button user:(PFUser *)user {
     [self shouldPresentAccountViewForUser:user];
 }

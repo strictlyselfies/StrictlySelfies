@@ -296,7 +296,7 @@
     shadow.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.750f];
     shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
 
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.498f green:0.388f blue:0.329f alpha:1.0f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.05 green:0.41 blue:0.87 alpha:1]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                 NSForegroundColorAttributeName: [UIColor whiteColor],
                                 NSShadowAttributeName: shadow
@@ -311,7 +311,7 @@
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
                                 NSForegroundColorAttributeName:
-                                    [UIColor colorWithRed:214.0f/255.0f green:210.0f/255.0f blue:197.0f/255.0f alpha:1.0f],
+                                    [UIColor colorWithRed:0.05 green:0.41 blue:0.87 alpha:1],
                                 NSShadowAttributeName: shadow
                                 }
                                                 forState:UIControlStateNormal];

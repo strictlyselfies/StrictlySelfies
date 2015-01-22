@@ -86,6 +86,7 @@ static TTTTimeIntervalFormatter *timeFormatter;
 @synthesize photoImageView;
 @synthesize likeBarView;
 @synthesize likeButton;
+@synthesize warningButton;
 @synthesize delegate;
 @synthesize currentLikeAvatars;
 
@@ -204,12 +205,21 @@ static TTTTimeIntervalFormatter *timeFormatter;
     [likeButton setSelected:selected];
 }
 
+- (void)setWarningButtonState:(BOOL)selected {
+//    if (selected) {
+//        [likeButton setTitleEdgeInsets:UIEdgeInsetsMake( -1.0f, 0.0f, 0.0f, 0.0f)];
+//        [[likeButton titleLabel] setShadowOffset:CGSizeMake( 0.0f, -1.0f)];
+//    } else {
+//        [likeButton setTitleEdgeInsets:UIEdgeInsetsMake( 0.0f, 0.0f, 0.0f, 0.0f)];
+//        [[likeButton titleLabel] setShadowOffset:CGSizeMake( 0.0f, 1.0f)];
+//    }
+    [warningButton setSelected:selected];
+}
 - (void)reloadLikeBar {
     self.likeUsers = [[PAPCache sharedCache] likersForPhoto:self.photo];
     [self setLikeButtonState:[[PAPCache sharedCache] isPhotoLikedByCurrentUser:self.photo]];
     [likeButton addTarget:self action:@selector(didTapLikePhotoButtonAction:) forControlEvents:UIControlEventTouchUpInside];    
 }
-
 
 #pragma mark - ()
 
@@ -332,11 +342,27 @@ static TTTTimeIntervalFormatter *timeFormatter;
     [likeButton addTarget:self action:@selector(didTapLikePhotoButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [likeBarView addSubview:likeButton];
     
+    warningButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [warningButton setFrame:CGRectMake(240, likeButtonY, likeButtonDim, likeButtonDim)];
+    [warningButton setBackgroundColor:[UIColor clearColor]];
+    [warningButton setAdjustsImageWhenDisabled:NO];
+    [warningButton setAdjustsImageWhenHighlighted:NO];
+    [warningButton setBackgroundImage:[UIImage imageNamed:@"ButtonWarning.png"] forState:UIControlStateNormal];
+    [warningButton setBackgroundImage:[UIImage imageNamed:@"ButtonWarningSelected.png"] forState:UIControlStateSelected];
+    [warningButton setBackgroundImage:[UIImage imageNamed:@"ButtonWarningSelected.png"] forState:UIControlStateHighlighted];
+    [warningButton addTarget:self action:@selector(didTapWarningButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [likeBarView addSubview:warningButton];
+    
+    
     [self reloadLikeBar];
     
     UIImageView *separator = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"SeparatorComments.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 1.0f, 0.0f, 1.0f)]];
     [separator setFrame:CGRectMake(0.0f, likeBarView.frame.size.height - 2.0f, likeBarView.frame.size.width, 2.0f)];
     [likeBarView addSubview:separator];    
+}
+
+- (void)didTapWarningButtonAction:(UIButton *)button {
+    [self.delegate promptAlert];
 }
 
 - (void)didTapLikePhotoButtonAction:(UIButton *)button {

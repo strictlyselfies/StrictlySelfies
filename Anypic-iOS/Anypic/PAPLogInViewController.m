@@ -38,9 +38,19 @@
     [textLabel setTextColor:[UIColor  whiteColor]];
     [textLabel setBackgroundColor:[UIColor clearColor]];
     [textLabel setTextAlignment:NSTextAlignmentCenter];
-
-    [self.logInView setLogo:nil];
     [self.logInView addSubview:textLabel];
+    
+    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoNavigationBar"]]];
+    
+    UILabel *eula = [[UILabel alloc] initWithFrame:CGRectMake( ([UIScreen mainScreen].bounds.size.width - textSize.width)/2.0f, 300.0f, textSize.width, textSize.height)];
+    [eula setFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:5.0f]];
+    [eula setLineBreakMode:NSLineBreakByWordWrapping];
+    [eula setNumberOfLines:5];
+    [eula setText:@"By signing up you agree to the EULA. Any and all objectionable content will not be tolerated and will cause user account to be suspended from StrictlySelfies"];
+    [eula setTextColor:[UIColor  whiteColor]];
+    [eula setBackgroundColor:[UIColor clearColor]];
+    [eula setTextAlignment:NSTextAlignmentCenter];
+    [self.logInView addSubview:eula];
     
     self.fields = PFLogInFieldsUsernameAndPassword;
     self.logInView.usernameField.placeholder = @"Enter your email";
