@@ -60,7 +60,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>101</string>
+	<string>102</string>
 	<key>FacebookAppID</key>
 	<string>1492939674300206</string>
 	<key>LSApplicationCategoryType</key>
@@ -72,7 +72,9 @@
 	<key>UIApplicationExitsOnSuspend</key>
 	<false/>
 	<key>UIBackgroundModes</key>
-	<array/>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UIInterfaceOrientation</key>
 	<string>UIInterfaceOrientationPortrait</string>
 	<key>UIPrerenderedIcon</key>
