@@ -17,6 +17,7 @@
 #import "PAPWelcomeViewController.h"
 #import "PAPActivityFeedViewController.h"
 #import "PAPPhotoDetailsViewController.h"
+#import "ShareTableViewController.h"
 
 @interface AppDelegate () {
     NSMutableData *_data;
@@ -24,7 +25,7 @@
 }
 
 @property (nonatomic, strong) PAPHomeViewController *homeViewController;
-@property (nonatomic, strong) PAPActivityFeedViewController *activityViewController;
+@property (nonatomic, strong) ShareTableViewController *activityViewController;
 @property (nonatomic, strong) PAPWelcomeViewController *welcomeViewController;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
@@ -225,7 +226,7 @@
     self.tabBarController = [[PAPTabBarController alloc] init];
     self.homeViewController = [[PAPHomeViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.homeViewController setFirstLaunch:firstLaunch];
-    self.activityViewController = [[PAPActivityFeedViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.activityViewController = [[ShareTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     UINavigationController *homeNavigationController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     UINavigationController *emptyNavigationController = [[UINavigationController alloc] init];
