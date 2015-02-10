@@ -22,14 +22,10 @@
     [super viewDidLoad];
 
     [[self tabBar] setBackgroundImage:[UIImage imageNamed:@"BackgroundTabBar.png"]];
-//    [[self tabBar] setSelectionIndicatorImage:[UIImage imageNamed:@"BackgroundTabBarItemSelected.png"]];
-    self.tabBar.tintColor = [UIColor colorWithRed:139.0f/255.0f green:111.0f/255.0f blue:95.0f/255.0f alpha:1.0f];
+    [[self tabBar] setSelectionIndicatorImage:[UIImage imageNamed:@"BackgroundTabBarItemSelected.png"]];
     
-    /*
-     // iOS 7 style
-     self.tabBar.tintColor = [UIColor colorWithRed:139.0f/255.0f green:111.0f/255.0f blue:95.0f/255.0f alpha:1.0f];
-     self.tabBar.barTintColor = [UIColor colorWithRed:77.0f/255.0f green:49.0f/255.0f blue:37.0f/255.0f alpha:1.0f];
-     */
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
     self.navController = [[UINavigationController alloc] init];
     [PAPUtility addBottomDropShadowToNavigationBarForNavigationController:self.navController];
 }
