@@ -256,17 +256,13 @@
     }
     
     PFQuery *followingActivitiesQuery = [PFQuery queryWithClassName:kPAPActivityClassKey];
-    [followingActivitiesQuery whereKey:kPAPActivityTypeKey equalTo:kPAPActivityTypeFollow];
-    [followingActivitiesQuery whereKey:kPAPActivityFromUserKey equalTo:[PFUser currentUser]];
     followingActivitiesQuery.cachePolicy = kPFCachePolicyNetworkOnly;
     followingActivitiesQuery.limit = 1000;
     
     PFQuery *photosFromFollowedUsersQuery = [PFQuery queryWithClassName:self.parseClassName];
-    [photosFromFollowedUsersQuery whereKey:kPAPPhotoUserKey matchesKey:kPAPActivityToUserKey inQuery:followingActivitiesQuery];
     [photosFromFollowedUsersQuery whereKeyExists:kPAPPhotoPictureKey];
 
     PFQuery *photosFromCurrentUserQuery = [PFQuery queryWithClassName:self.parseClassName];
-    [photosFromCurrentUserQuery whereKey:kPAPPhotoUserKey equalTo:[PFUser currentUser]];
     [photosFromCurrentUserQuery whereKeyExists:kPAPPhotoPictureKey];
 
     PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:photosFromFollowedUsersQuery, photosFromCurrentUserQuery, nil]];
