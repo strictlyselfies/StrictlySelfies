@@ -14,8 +14,8 @@
 // ActionSheet button indexes
 typedef enum {
 	kPAPSettingsProfile = 0,
-	kPAPSettingsFindFriends,
 	kPAPSettingsLogout,
+    kPAPSettingsFindFriends,
     kPAPSettingsNumberOfButtons
 } kPAPSettingsActionSheetButtons;
  
