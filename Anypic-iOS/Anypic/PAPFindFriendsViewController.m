@@ -481,7 +481,7 @@ typedef enum {
     [composeEmailViewController setMailComposeDelegate:self];
     [composeEmailViewController setSubject:@"Join me on StrictlySelfies"];
     [composeEmailViewController setToRecipients:[NSArray arrayWithObjects:recipient, nil]];
-    [composeEmailViewController setMessageBody:@"<h2>Share your pictures, share your story.</h2><p><a href=\"http://StrictlySelfies.org\">StrictlySelfies</a> is the easiest way to share photos with your friends. Get the app and share your fun photos with the world.</p><p><a href=\"http://StrictlySelfies.org\">StrictlySelfies</a> is fully powered by <a href=\"http://parse.com\">Parse</a>.</p>" isHTML:YES];
+    [composeEmailViewController setMessageBody:@"<h2>Share your pictures, share your story.</h2><p><a href=\"http://bit.ly/strictlyselfies\">StrictlySelfies</a> is the easiest way to share photos with your friends. Get the app and share your fun photos with the world.</p><p><a href=\"http://bit.ly/strictlyselfies\">StrictlySelfies</a></p>" isHTML:YES];
     
     // Dismiss the current modal view controller and display the compose email one.
     // Note that we do not animate them. Doing so would require us to present the compose
@@ -497,7 +497,7 @@ typedef enum {
     // Send the destination phone number and a default text
     [composeTextViewController setMessageComposeDelegate:self];
     [composeTextViewController setRecipients:[NSArray arrayWithObjects:recipient, nil]];
-    [composeTextViewController setBody:@"Check out StrictlySelfies! http://StrictlySelfies.org"];
+    [composeTextViewController setBody:@"Check out StrictlySelfies! http://bit.ly/strictlyselfies"];
     
     // Dismiss the current modal view controller and display the compose text one.
     // See previous use for reason why these are not animated.
