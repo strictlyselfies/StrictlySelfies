@@ -100,23 +100,38 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-            SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-            [facebookSheet addImage:[UIImage imageNamed:@"1024"]];
-            [facebookSheet setInitialText:@"Join me on strictly selfies!"];
-            [facebookSheet addURL:[NSURL URLWithString:@"http://bit.ly/strictlyselfies"]];
-            [self presentViewController:facebookSheet animated:YES completion:nil];
-        } else {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"INSTALL FACEBOOK" message:@"Please make sure you have the facebook app installed and a user signed in to use this feature" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *alertAction = [UIAlertAction
-                                          actionWithTitle:@"OK"
-                                          style:UIAlertActionStyleDefault
-                                          handler:^(UIAlertAction * action)
-                                          {
-                                              [alert dismissViewControllerAnimated:YES completion:nil];
+        FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
+        params.link = [NSURL URLWithString:@"https://itunes.apple.com/us/app/strictlyselfies/id952480696?mt=8"];
+        
+            // If the Facebook app is installed and we can present the share dialog
+        if ([FBDialogs canPresentShareDialogWithParams:params]) {
+            [FBDialogs presentShareDialogWithLink:params.link
+                                          handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                              if(error) {
+                                                  NSLog(@"Error publishing story: %@", error.description);
+                                              } else {
+                                                  NSLog(@"result %@", results);
+                                              }
                                           }];
-            [alert addAction:alertAction];
-            [self presentViewController:alert animated:YES completion:nil];
+        } else {
+            if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+                SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                [facebookSheet addImage:[UIImage imageNamed:@"1024"]];
+                [facebookSheet setInitialText:@"Join me on strictly selfies!"];
+                [facebookSheet addURL:[NSURL URLWithString:@"http://bit.ly/strictlyselfies"]];
+                [self presentViewController:facebookSheet animated:YES completion:nil];
+            } else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"INSTALL FACEBOOK" message:@"Please make sure you have the facebook app installed and a user signed in to use this feature" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *alertAction = [UIAlertAction
+                                              actionWithTitle:@"OK"
+                                              style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction * action)
+                                              {
+                                                  [alert dismissViewControllerAnimated:YES completion:nil];
+                                              }];
+                [alert addAction:alertAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
         }
     } else if (indexPath.row == 1) {
         NSArray *cachePathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
