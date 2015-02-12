@@ -15,7 +15,6 @@
 typedef enum {
 	kPAPSettingsProfile = 0,
 	kPAPSettingsLogout,
-    kPAPSettingsFindFriends,
     kPAPSettingsNumberOfButtons
 } kPAPSettingsActionSheetButtons;
  
@@ -52,12 +51,6 @@ typedef enum {
             PAPAccountViewController *accountViewController = [[PAPAccountViewController alloc] initWithStyle:UITableViewStylePlain];
             [accountViewController setUser:[PFUser currentUser]];
             [navController pushViewController:accountViewController animated:YES];
-            break;
-        }
-        case kPAPSettingsFindFriends:
-        {
-            PAPFindFriendsViewController *findFriendsVC = [[PAPFindFriendsViewController alloc] init];
-            [navController pushViewController:findFriendsVC animated:YES];
             break;
         }
         case kPAPSettingsLogout:
