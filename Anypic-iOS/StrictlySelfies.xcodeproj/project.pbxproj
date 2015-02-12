@@ -56,10 +56,6 @@
 		C4BE6790157FC7F700A291C2 /* ButtonFollowingSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE6738157FC7E900A291C2 /* ButtonFollowingSelected@2x.png */; };
 		C4BE6791157FC7F700A291C2 /* ButtonFollowSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE6739157FC7EA00A291C2 /* ButtonFollowSelected.png */; };
 		C4BE6792157FC7F700A291C2 /* ButtonFollowSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673A157FC7EA00A291C2 /* ButtonFollowSelected@2x.png */; };
-		C4BE6793157FC7F700A291C2 /* ButtonImageSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673B157FC7EA00A291C2 /* ButtonImageSettings.png */; };
-		C4BE6794157FC7F700A291C2 /* ButtonImageSettings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673C157FC7EA00A291C2 /* ButtonImageSettings@2x.png */; };
-		C4BE6795157FC7F700A291C2 /* ButtonImageSettingsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673D157FC7EB00A291C2 /* ButtonImageSettingsSelected.png */; };
-		C4BE6796157FC7F700A291C2 /* ButtonImageSettingsSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673E157FC7EB00A291C2 /* ButtonImageSettingsSelected@2x.png */; };
 		C4BE6797157FC7F700A291C2 /* ButtonLike.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE673F157FC7EB00A291C2 /* ButtonLike.png */; };
 		C4BE6798157FC7F700A291C2 /* ButtonLike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE6740157FC7EC00A291C2 /* ButtonLike@2x.png */; };
 		C4BE6799157FC7F700A291C2 /* ButtonLikeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BE6741157FC7EC00A291C2 /* ButtonLikeSelected.png */; };
@@ -124,7 +120,6 @@
 		C4F102E2156C58440061BC3E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F102DF156C58440061BC3E /* Entitlements.plist */; };
 		C4F102E7156C58570061BC3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F102E5156C58570061BC3E /* InfoPlist.strings */; };
 		C4F102EF156C58E00061BC3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F102EC156C58E00061BC3E /* main.m */; };
-		D3074D6A1A3A4F6700C98E50 /* LogoNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D691A3A4F6700C98E50 /* LogoNavigationBar@2x.png */; };
 		D3074D6F1A3A514C00C98E50 /* BackgroundLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */; };
 		D3074D701A3A514C00C98E50 /* BackgroundLogin-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */; };
 		D3074D721A3A527A00C98E50 /* BackgroundTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */; };
@@ -137,6 +132,9 @@
 		D329461C1A8AC99C00986885 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946191A8AC99C00986885 /* facebook.png */; };
 		D32946201A8ACAC000986885 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = D329461F1A8ACAC000986885 /* twitter.png */; };
 		D32946241A8ACB6F00986885 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946231A8ACB6F00986885 /* instagram.png */; };
+		D32946261A8CDCE100986885 /* LogoNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946251A8CDCE100986885 /* LogoNavigationBar@2x.png */; };
+		D32946291A8CDF5600986885 /* ButtonImageSettings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946271A8CDF5600986885 /* ButtonImageSettings@2x.png */; };
+		D329462A1A8CDF5600986885 /* ButtonImageSettingsSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946281A8CDF5600986885 /* ButtonImageSettingsSelected@2x.png */; };
 		D34BF5F51A705F0900926C27 /* backgroundNavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5F31A705F0900926C27 /* backgroundNavigationBar.png */; };
 		D34BF5F61A705F0900926C27 /* backgroundNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */; };
 		D34BF5FD1A7064A700926C27 /* ButtonWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = D34BF5FB1A7064A700926C27 /* ButtonWarning.png */; };
@@ -217,10 +215,6 @@
 		C4BE6738157FC7E900A291C2 /* ButtonFollowingSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonFollowingSelected@2x.png"; sourceTree = "<group>"; };
 		C4BE6739157FC7EA00A291C2 /* ButtonFollowSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonFollowSelected.png; sourceTree = "<group>"; };
 		C4BE673A157FC7EA00A291C2 /* ButtonFollowSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonFollowSelected@2x.png"; sourceTree = "<group>"; };
-		C4BE673B157FC7EA00A291C2 /* ButtonImageSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonImageSettings.png; sourceTree = "<group>"; };
-		C4BE673C157FC7EA00A291C2 /* ButtonImageSettings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonImageSettings@2x.png"; sourceTree = "<group>"; };
-		C4BE673D157FC7EB00A291C2 /* ButtonImageSettingsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonImageSettingsSelected.png; sourceTree = "<group>"; };
-		C4BE673E157FC7EB00A291C2 /* ButtonImageSettingsSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonImageSettingsSelected@2x.png"; sourceTree = "<group>"; };
 		C4BE673F157FC7EB00A291C2 /* ButtonLike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLike.png; sourceTree = "<group>"; };
 		C4BE6740157FC7EC00A291C2 /* ButtonLike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonLike@2x.png"; sourceTree = "<group>"; };
 		C4BE6741157FC7EC00A291C2 /* ButtonLikeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLikeSelected.png; sourceTree = "<group>"; };
@@ -310,7 +304,6 @@
 		C4F102EB156C58E00061BC3E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		C4F102EC156C58E00061BC3E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		C4F102ED156C58E00061BC3E /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
-		D3074D691A3A4F6700C98E50 /* LogoNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoNavigationBar@2x.png"; sourceTree = "<group>"; };
 		D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin@2x.png"; sourceTree = "<group>"; };
 		D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin-568h@2x.png"; sourceTree = "<group>"; };
 		D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTabBar@2x.png"; sourceTree = "<group>"; };
@@ -324,6 +317,9 @@
 		D32946191A8AC99C00986885 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		D329461F1A8ACAC000986885 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		D32946231A8ACB6F00986885 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
+		D32946251A8CDCE100986885 /* LogoNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoNavigationBar@2x.png"; sourceTree = "<group>"; };
+		D32946271A8CDF5600986885 /* ButtonImageSettings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonImageSettings@2x.png"; sourceTree = "<group>"; };
+		D32946281A8CDF5600986885 /* ButtonImageSettingsSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonImageSettingsSelected@2x.png"; sourceTree = "<group>"; };
 		D34BF5F31A705F0900926C27 /* backgroundNavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundNavigationBar.png; sourceTree = "<group>"; };
 		D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundNavigationBar@2x.png"; sourceTree = "<group>"; };
 		D34BF5FB1A7064A700926C27 /* ButtonWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonWarning.png; sourceTree = "<group>"; };
@@ -508,12 +504,10 @@
 				C4BE6738157FC7E900A291C2 /* ButtonFollowingSelected@2x.png */,
 				C4BE6739157FC7EA00A291C2 /* ButtonFollowSelected.png */,
 				C4BE673A157FC7EA00A291C2 /* ButtonFollowSelected@2x.png */,
-				C4BE673B157FC7EA00A291C2 /* ButtonImageSettings.png */,
-				C4BE673C157FC7EA00A291C2 /* ButtonImageSettings@2x.png */,
-				C4BE673D157FC7EB00A291C2 /* ButtonImageSettingsSelected.png */,
-				C4BE673E157FC7EB00A291C2 /* ButtonImageSettingsSelected@2x.png */,
 				D34BF5FB1A7064A700926C27 /* ButtonWarning.png */,
 				D34BF5FC1A7064A700926C27 /* ButtonWarningSelected.png */,
+				D32946271A8CDF5600986885 /* ButtonImageSettings@2x.png */,
+				D32946281A8CDF5600986885 /* ButtonImageSettingsSelected@2x.png */,
 				C4BE673F157FC7EB00A291C2 /* ButtonLike.png */,
 				C4BE6740157FC7EC00A291C2 /* ButtonLike@2x.png */,
 				C4BE6741157FC7EC00A291C2 /* ButtonLikeSelected.png */,
@@ -542,7 +536,7 @@
 				D32946101A8A6A8C00986885 /* IconTimeline@2x.png */,
 				C4BE6759157FC7F200A291C2 /* IconTickSelected.png */,
 				C4BE675A157FC7F200A291C2 /* IconTickSelected@2x.png */,
-				D3074D691A3A4F6700C98E50 /* LogoNavigationBar@2x.png */,
+				D32946251A8CDCE100986885 /* LogoNavigationBar@2x.png */,
 				C4BE6761157FC7F400A291C2 /* ProfilePictureStroke.png */,
 				C4BE6762157FC7F400A291C2 /* ProfilePictureStroke@2x.png */,
 				C4BE6763157FC7F500A291C2 /* SeparatorComments.png */,
@@ -882,11 +876,8 @@
 				C4BE6791157FC7F700A291C2 /* ButtonFollowSelected.png in Resources */,
 				D36939CC1A40ED7E00B16628 /* ActivityFeedBlank@2x.png in Resources */,
 				C4BE6792157FC7F700A291C2 /* ButtonFollowSelected@2x.png in Resources */,
-				C4BE6793157FC7F700A291C2 /* ButtonImageSettings.png in Resources */,
-				C4BE6794157FC7F700A291C2 /* ButtonImageSettings@2x.png in Resources */,
-				C4BE6795157FC7F700A291C2 /* ButtonImageSettingsSelected.png in Resources */,
+				D32946261A8CDCE100986885 /* LogoNavigationBar@2x.png in Resources */,
 				D36939B81A3FF7B500B16628 /* Images.xcassets in Resources */,
-				C4BE6796157FC7F700A291C2 /* ButtonImageSettingsSelected@2x.png in Resources */,
 				D34BF5FD1A7064A700926C27 /* ButtonWarning.png in Resources */,
 				C4BE6797157FC7F700A291C2 /* ButtonLike.png in Resources */,
 				C4BE6798157FC7F700A291C2 /* ButtonLike@2x.png in Resources */,
@@ -908,6 +899,7 @@
 				C4BE67A3157FC7F700A291C2 /* IconArrow.png in Resources */,
 				C4BE67A4157FC7F700A291C2 /* IconArrow@2x.png in Resources */,
 				C4BE67A5157FC7F700A291C2 /* IconComment.png in Resources */,
+				D329462A1A8CDF5600986885 /* ButtonImageSettingsSelected@2x.png in Resources */,
 				C4BE67A6157FC7F700A291C2 /* IconComment@2x.png in Resources */,
 				C4BE67A7157FC7F700A291C2 /* IconFollowers.png in Resources */,
 				D32946241A8ACB6F00986885 /* instagram.png in Resources */,
@@ -916,6 +908,7 @@
 				D36939C01A40EC0600B16628 /* ButtonCameraSelected@2x.png in Resources */,
 				D32946111A8A6A8C00986885 /* IconTimelineSelected@2x.png in Resources */,
 				C4BE67AD157FC7F700A291C2 /* IconPics.png in Resources */,
+				D32946291A8CDF5600986885 /* ButtonImageSettings@2x.png in Resources */,
 				C4BE67AE157FC7F700A291C2 /* IconPics@2x.png in Resources */,
 				C4BE67AF157FC7F700A291C2 /* IconTick.png in Resources */,
 				C4BE67B0157FC7F700A291C2 /* IconTick@2x.png in Resources */,
@@ -924,7 +917,6 @@
 				C4BE67B1157FC7F700A291C2 /* IconTickSelected.png in Resources */,
 				C4BE67B2157FC7F700A291C2 /* IconTickSelected@2x.png in Resources */,
 				C4BE67B9157FC7F700A291C2 /* ProfilePictureStroke.png in Resources */,
-				D3074D6A1A3A4F6700C98E50 /* LogoNavigationBar@2x.png in Resources */,
 				C4BE67BA157FC7F700A291C2 /* ProfilePictureStroke@2x.png in Resources */,
 				C4BE67BB157FC7F700A291C2 /* SeparatorComments.png in Resources */,
 				C4BE67BC157FC7F700A291C2 /* SeparatorComments@2x.png in Resources */,
