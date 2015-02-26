@@ -122,7 +122,6 @@
 		C4F102EF156C58E00061BC3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F102EC156C58E00061BC3E /* main.m */; };
 		D3074D6F1A3A514C00C98E50 /* BackgroundLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */; };
 		D3074D701A3A514C00C98E50 /* BackgroundLogin-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */; };
-		D3074D721A3A527A00C98E50 /* BackgroundTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */; };
 		D32946091A8A63DD00986885 /* IconHomeSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946071A8A63DD00986885 /* IconHomeSelected@2x.png */; };
 		D329460A1A8A63DD00986885 /* IconHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D32946081A8A63DD00986885 /* IconHome@2x.png */; };
 		D32946111A8A6A8C00986885 /* IconTimelineSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D329460F1A8A6A8C00986885 /* IconTimelineSelected@2x.png */; };
@@ -150,6 +149,7 @@
 		D39BA37C1A31E0E800520D21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39BA37B1A31E0E800520D21 /* FacebookSDK.framework */; };
 		D39BA37F1A31E13B00520D21 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D39BA37E1A31E13B00520D21 /* TTTTimeIntervalFormatter.m */; };
 		D3D7C71D1A9F55ED0079CC10 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D7C71C1A9F55ED0079CC10 /* message.png */; };
+		D3D7C71F1A9FA8ED0079CC10 /* BackgroundTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D7C71E1A9FA8ED0079CC10 /* BackgroundTabBar@2x.png */; };
 		E7ADD50E17BEA09500E975E2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ADD4B617BEA09500E975E2 /* MBProgressHUD.m */; };
 		E7ADD50F17BEA09500E975E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ADD4B717BEA09500E975E2 /* Parse.framework */; };
 		E7ADD51017BEA09500E975E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ADD4BA17BEA09500E975E2 /* Reachability.m */; };
@@ -307,7 +307,6 @@
 		C4F102ED156C58E00061BC3E /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D3074D6D1A3A514C00C98E50 /* BackgroundLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin@2x.png"; sourceTree = "<group>"; };
 		D3074D6E1A3A514C00C98E50 /* BackgroundLogin-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundLogin-568h@2x.png"; sourceTree = "<group>"; };
-		D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTabBar@2x.png"; sourceTree = "<group>"; };
 		D32946071A8A63DD00986885 /* IconHomeSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconHomeSelected@2x.png"; sourceTree = "<group>"; };
 		D32946081A8A63DD00986885 /* IconHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconHome@2x.png"; sourceTree = "<group>"; };
 		D329460F1A8A6A8C00986885 /* IconTimelineSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconTimelineSelected@2x.png"; sourceTree = "<group>"; };
@@ -337,6 +336,7 @@
 		D39BA37D1A31E13B00520D21 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
 		D39BA37E1A31E13B00520D21 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
 		D3D7C71C1A9F55ED0079CC10 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		D3D7C71E1A9FA8ED0079CC10 /* BackgroundTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTabBar@2x.png"; sourceTree = "<group>"; };
 		E7ADD4B517BEA09500E975E2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		E7ADD4B617BEA09500E975E2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E7ADD4B717BEA09500E975E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -491,7 +491,7 @@
 				D34BF5F41A705F0900926C27 /* backgroundNavigationBar@2x.png */,
 				C4BE6721157FC7E300A291C2 /* BackgroundNewActivity.png */,
 				C4BE6722157FC7E300A291C2 /* BackgroundNewActivity@2x.png */,
-				D3074D711A3A527A00C98E50 /* BackgroundTabBar@2x.png */,
+				D3D7C71E1A9FA8ED0079CC10 /* BackgroundTabBar@2x.png */,
 				C4BE6726157FC7E500A291C2 /* BackgroundTabBarItemSelected@2x.png */,
 				C4BE6727157FC7E500A291C2 /* ButtonBack.png */,
 				C4BE6728157FC7E500A291C2 /* ButtonBack@2x.png */,
@@ -851,7 +851,6 @@
 				C4BE66FE157FC52F00A291C2 /* ShadowProfilePicture-35@2x.png in Resources */,
 				C4BE66FF157FC52F00A291C2 /* ShadowProfilePicture-43.png in Resources */,
 				C4BE6700157FC52F00A291C2 /* ShadowProfilePicture-43@2x.png in Resources */,
-				D3074D721A3A527A00C98E50 /* BackgroundTabBar@2x.png in Resources */,
 				C4BE676D157FC7F700A291C2 /* BackgroundComments.png in Resources */,
 				C4BE676E157FC7F700A291C2 /* BackgroundComments@2x.png in Resources */,
 				C4BE676F157FC7F700A291C2 /* BackgroundFindFriendsCell.png in Resources */,
@@ -874,6 +873,7 @@
 				C4BE678D157FC7F700A291C2 /* ButtonFollowing.png in Resources */,
 				C4BE678E157FC7F700A291C2 /* ButtonFollowing@2x.png in Resources */,
 				C4BE678F157FC7F700A291C2 /* ButtonFollowingSelected.png in Resources */,
+				D3D7C71F1A9FA8ED0079CC10 /* BackgroundTabBar@2x.png in Resources */,
 				D32946181A8AC7CC00986885 /* 1024.png in Resources */,
 				C4BE6790157FC7F700A291C2 /* ButtonFollowingSelected@2x.png in Resources */,
 				C4BE6791157FC7F700A291C2 /* ButtonFollowSelected.png in Resources */,

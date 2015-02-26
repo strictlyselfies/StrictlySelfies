@@ -22,7 +22,6 @@
     [super viewDidLoad];
 
     [[self tabBar] setBackgroundImage:[UIImage imageNamed:@"BackgroundTabBar.png"]];
-    [[self tabBar] setSelectionIndicatorImage:[UIImage imageNamed:@"BackgroundTabBarItemSelected.png"]];
     
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
