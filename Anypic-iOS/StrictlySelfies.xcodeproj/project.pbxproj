@@ -149,6 +149,7 @@
 		D36939CE1A40ED9B00B16628 /* HomeTimelineBlank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36939CD1A40ED9B00B16628 /* HomeTimelineBlank@2x.png */; };
 		D39BA37C1A31E0E800520D21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39BA37B1A31E0E800520D21 /* FacebookSDK.framework */; };
 		D39BA37F1A31E13B00520D21 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D39BA37E1A31E13B00520D21 /* TTTTimeIntervalFormatter.m */; };
+		D3D7C71D1A9F55ED0079CC10 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D7C71C1A9F55ED0079CC10 /* message.png */; };
 		E7ADD50E17BEA09500E975E2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ADD4B617BEA09500E975E2 /* MBProgressHUD.m */; };
 		E7ADD50F17BEA09500E975E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ADD4B717BEA09500E975E2 /* Parse.framework */; };
 		E7ADD51017BEA09500E975E2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ADD4BA17BEA09500E975E2 /* Reachability.m */; };
@@ -335,6 +336,7 @@
 		D39BA37B1A31E0E800520D21 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		D39BA37D1A31E13B00520D21 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
 		D39BA37E1A31E13B00520D21 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		D3D7C71C1A9F55ED0079CC10 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 		E7ADD4B517BEA09500E975E2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		E7ADD4B617BEA09500E975E2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E7ADD4B717BEA09500E975E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -387,7 +389,7 @@
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
-				09ABC07713A1D52D009C3FCF /* Anypic */,
+				09ABC07713A1D52D009C3FCF /* StrictlySelfies */,
 				09ABC07013A1D52D009C3FCF /* Frameworks */,
 				E7ADD44517BEA09500E975E2 /* Vendor */,
 				09ABC06E13A1D52D009C3FCF /* Products */,
@@ -431,7 +433,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		09ABC07713A1D52D009C3FCF /* Anypic */ = {
+		09ABC07713A1D52D009C3FCF /* StrictlySelfies */ = {
 			isa = PBXGroup;
 			children = (
 				E7ADD51917BEA34A00E975E2 /* Categories */,
@@ -449,7 +451,7 @@
 				D36939B71A3FF7B500B16628 /* Images.xcassets */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
-			name = Anypic;
+			name = StrictlySelfies;
 			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
@@ -468,6 +470,7 @@
 		7460D3AD1565557A00F755E4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D3D7C71C1A9F55ED0079CC10 /* message.png */,
 				D32946191A8AC99C00986885 /* facebook.png */,
 				D32946231A8ACB6F00986885 /* instagram.png */,
 				D329461F1A8ACAC000986885 /* twitter.png */,
@@ -883,6 +886,7 @@
 				C4BE6798157FC7F700A291C2 /* ButtonLike@2x.png in Resources */,
 				D36939BE1A40EC0000B16628 /* ButtonCamera@2x.png in Resources */,
 				D3074D701A3A514C00C98E50 /* BackgroundLogin-568h@2x.png in Resources */,
+				D3D7C71D1A9F55ED0079CC10 /* message.png in Resources */,
 				C4BE6799157FC7F700A291C2 /* ButtonLikeSelected.png in Resources */,
 				C4BE679A157FC7F700A291C2 /* ButtonLikeSelected@2x.png in Resources */,
 				C4BE679B157FC7F700A291C2 /* ButtonNavigationBar.png in Resources */,

@@ -43,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -56,8 +56,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SHARE"];
     }
-    
     if (indexPath.row == 0) {
+        UILabel *textLabel = [[UILabel alloc] init];
+        [textLabel setFrame:CGRectMake(((self.view.frame.size.height) / 3), ((self.view.frame.size.height) / 3)/2 - 20, self.view.frame.size.width - ((self.view.frame.size.height) / 3), 40)];
+        [textLabel setText:@"MESSAGE"];
+        [textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:25.0f]];
+        [textLabel setTextColor:[UIColor blackColor]];
+        [cell addSubview:textLabel];
+        
+        [cell setBackgroundColor:[UIColor whiteColor]];
+        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"message"]];
+        [image setFrame:CGRectMake(10, 10, ((self.view.frame.size.height) / 3) - 20, ((self.view.frame.size.height) / 3) - 20)];
+        [cell addSubview:image];
+    }
+    else if (indexPath.row == 1) {
         UILabel *textLabel = [[UILabel alloc] init];
         [textLabel setFrame:CGRectMake(((self.view.frame.size.height) / 3), ((self.view.frame.size.height) / 3)/2 - 20, self.view.frame.size.width - ((self.view.frame.size.height) / 3), 40)];
         [textLabel setText:@"FACEBOOK"];
@@ -69,7 +81,7 @@
         UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"facebook"]];
         [image setFrame:CGRectMake(10, 10, ((self.view.frame.size.height) / 3) - 20, ((self.view.frame.size.height) / 3) - 20)];
         [cell addSubview:image];
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 2) {
         UILabel *textLabel = [[UILabel alloc] init];
         [textLabel setFrame:CGRectMake(((self.view.frame.size.height) / 3), ((self.view.frame.size.height) / 3)/2 - 20, self.view.frame.size.width - ((self.view.frame.size.height) / 3), 40)];
         [textLabel setText:@"INSTAGRAM"];
@@ -81,7 +93,7 @@
         UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"instagram"]];
         [image setFrame:CGRectMake(10, 10, ((self.view.frame.size.height) / 3) - 20, ((self.view.frame.size.height) / 3) - 20)];
         [cell addSubview:image];
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 3) {
         UILabel *textLabel = [[UILabel alloc] init];
         [textLabel setFrame:CGRectMake(((self.view.frame.size.height) / 3), ((self.view.frame.size.height) / 3)/2 - 20, self.view.frame.size.width - ((self.view.frame.size.height) / 3), 40)];
         [textLabel setText:@"TWITTER"];
@@ -100,6 +112,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        if ([MFMessageComposeViewController canSendText])
+        {
+            MFMessageComposeViewController *text = [[MFMessageComposeViewController alloc] init];
+            [text setMessageComposeDelegate:self];
+            UIImage *image = [UIImage imageNamed:@"1024"];
+            [text addAttachmentData:UIImageJPEGRepresentation(image, 1.0) typeIdentifier:@"image/jpeg" filename:@"strictlyselfies.jpg"];
+            [text setBody:@"Join me on StrictlySelfies.\n\nhttp://bit.ly/strictlyselfies"];
+            [self presentViewController:text animated:YES completion:nil];
+        }
+    }
+    else if (indexPath.row == 1) {
         FBLinkShareParams *params = [[FBLinkShareParams alloc] init];
         params.link = [NSURL URLWithString:@"https://itunes.apple.com/us/app/strictlyselfies/id952480696?mt=8"];
         
@@ -133,7 +156,7 @@
                 [self presentViewController:alert animated:YES completion:nil];
             }
         }
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 2) {
         NSArray *cachePathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *cachePath = [cachePathArray lastObject];
         UIImage *image = [UIImage imageNamed:@"1024"];
@@ -170,7 +193,7 @@
                               cancelButtonTitle:NSLocalizedString(@"Okay", @"dismiss alert button title")
                               otherButtonTitles:nil] show];
         }
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 3) {
         if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
             SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             [tweetSheet setInitialText:@"Join me on strictly selfies!"];
@@ -190,6 +213,10 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     }
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
