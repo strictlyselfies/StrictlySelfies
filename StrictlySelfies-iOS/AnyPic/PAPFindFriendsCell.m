@@ -111,7 +111,7 @@
     
     // Set name 
     NSString *nameString = [self.user objectForKey:kPAPUserDisplayNameKey];
-    CGSize nameSize = [nameString boundingRectWithSize:CGSizeMake(144.0f, CGFLOAT_MAX)
+    CGSize nameSize = [nameString boundingRectWithSize:CGSizeMake(244.0f, CGFLOAT_MAX)
                                                     options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin
                                                  attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16.0f]}
                                                     context:nil].size;

@@ -83,7 +83,8 @@
 }
 
 - (void)searchUser:(id)sender {
-    NSLog(@"SEARCH");
+    PAPFindFriendsViewController *detailViewController = [[PAPFindFriendsViewController alloc] init];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

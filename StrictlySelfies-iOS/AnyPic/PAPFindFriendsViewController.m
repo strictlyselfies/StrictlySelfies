@@ -117,29 +117,29 @@ typedef enum {
 
 - (PFQuery *)queryForTable {
     // Use cached facebook friend ids
-    NSArray *facebookFriends = [[PAPCache sharedCache] facebookFriends];
+//    NSArray *facebookFriends = [[PAPCache sharedCache] facebookFriends];
     
     // Query for all friends you have on facebook and who are using the app
     PFQuery *friendsQuery = [PFUser query];
-    [friendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookFriends];
+//    [friendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookFriends];
     
-    // Query for all Parse employees
-    NSMutableArray *parseEmployees = [[NSMutableArray alloc] initWithArray:kPAPParseEmployeeAccounts];
-    [parseEmployees removeObject:[[PFUser currentUser] objectForKey:kPAPUserFacebookIDKey]];
-    PFQuery *parseEmployeeQuery = [PFUser query];
-    [parseEmployeeQuery whereKey:kPAPUserFacebookIDKey containedIn:parseEmployees];
-        
+//    // Query for all Parse employees
+//    NSMutableArray *parseEmployees = [[NSMutableArray alloc] initWithArray:kPAPParseEmployeeAccounts];
+//    [parseEmployees removeObject:[[PFUser currentUser] objectForKey:kPAPUserFacebookIDKey]];
+//    PFQuery *parseEmployeeQuery = [PFUser query];
+//    [parseEmployeeQuery whereKey:kPAPUserFacebookIDKey containedIn:parseEmployees];
+    
     // Combine the two queries with an OR
-    PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:friendsQuery, parseEmployeeQuery, nil]];
-    query.cachePolicy = kPFCachePolicyNetworkOnly;
+//    PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:friendsQuery, parseEmployeeQuery, nil]];
+//    query.cachePolicy = kPFCachePolicyNetworkOnly;
+//    
+//    if (self.objects.count == 0) {
+//        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+//    }
+//    
+    [friendsQuery orderByAscending:kPAPUserDisplayNameKey];
     
-    if (self.objects.count == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    }
-    
-    [query orderByAscending:kPAPUserDisplayNameKey];
-    
-    return query;
+    return friendsQuery;
 }
 
 - (void)objectsDidLoad:(NSError *)error {
@@ -189,7 +189,7 @@ typedef enum {
         cell = [[PAPFindFriendsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FriendCellIdentifier];
         [cell setDelegate:self];
     }
-    
+    [cell.followButton setHidden:YES];
     [cell setUser:(PFUser*)object];
 
     [cell.photoLabel setText:@"0 photos"];
