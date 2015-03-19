@@ -1,11 +1,11 @@
 {
     "applications": {
-        "Anypic": {
-            "applicationId": "PklSbwxITu46cOumt6tdWw8Jtg2urg0vj0CrbLr0", 
-            "masterKey": "0mpRGtvmvPcgZ0kN0ozR2CK2TZiwQVMzKkzVtomG"
+        "StrictlySelfies": {
+            "applicationId": "F0vdxARR7sA9rCKS4wKKmQXeslfXrumzt2EpPkNR", 
+            "masterKey": "7vSyPrGHhVz1aJ7GLCXFxnG8oOvwyl3VWhJYBXPa"
         }, 
         "_default": {
-            "link": "Anypic"
+            "link": "StrictlySelfies"
         }
     }, 
     "global": {

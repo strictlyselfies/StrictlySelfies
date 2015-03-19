@@ -328,11 +328,21 @@
         if (cell == nil) {
             cell = [[PAPPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             [cell.photoButton addTarget:self action:@selector(didTapOnPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.deleteButton addTarget:self action:@selector(deletePhoto:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         cell.photoButton.tag = indexPath.section;
         cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
         
+        PFObject *photo = [self.objects objectAtIndex:indexPath.section];
+        if ([[[PFUser currentUser] username] isEqualToString:[[photo objectForKey:kPAPPhotoUserKey] username]])
+        {
+            [cell.deleteButton setHidden:NO];
+            [cell.deleteButton setTag:indexPath.section];
+        } else {
+            [cell.deleteButton setHidden:YES];
+        }
+
         if (object) {
             cell.imageView.file = [object objectForKey:kPAPPhotoPictureKey];
             
@@ -490,6 +500,16 @@
         PAPPhotoDetailsViewController *photoDetailsVC = [[PAPPhotoDetailsViewController alloc] initWithPhoto:photo];
         [self.navigationController pushViewController:photoDetailsVC animated:YES];
     }
+}
+
+- (void)deletePhoto:(id)sender {
+    long tag = [sender tag];
+    PFObject *photo = [self.objects objectAtIndex:tag];
+    [photo deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:PAPPhotoDetailsViewControllerUserDeletedPhotoNotification object:nil];
+        }
+    }];
 }
 
 @end

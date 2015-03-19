@@ -47,7 +47,12 @@
         self.photoButton.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.photoButton];
         
+        self.deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.deleteButton.frame = CGRectMake(40, 220, 40, 40);
+        [self.deleteButton setImage:[UIImage imageNamed:@"Delete"] forState:UIControlStateNormal];
+        [self.contentView addSubview:self.deleteButton];
         [self.contentView bringSubviewToFront:self.imageView];
+        [self.contentView bringSubviewToFront:self.deleteButton];
     }
 
     return self;
