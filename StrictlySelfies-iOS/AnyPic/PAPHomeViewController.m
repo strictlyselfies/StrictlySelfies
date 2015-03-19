@@ -30,6 +30,8 @@
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoNavigationBar.png"]];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchUser:)];
+    
     self.navigationItem.rightBarButtonItem = [[PAPSettingsButtonItem alloc] initWithTarget:self action:@selector(settingsButtonAction:)];
     
     self.blankTimelineView = [[UIView alloc] initWithFrame:self.tableView.bounds];
@@ -79,4 +81,9 @@
     PAPFindFriendsViewController *detailViewController = [[PAPFindFriendsViewController alloc] init];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
+
+- (void)searchUser:(id)sender {
+    NSLog(@"SEARCH");
+}
+
 @end
