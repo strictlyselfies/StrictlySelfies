@@ -70,35 +70,10 @@ typedef enum {
     UIView *texturedBackgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
     [texturedBackgroundView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundLeather.png"]]];
     self.tableView.backgroundView = texturedBackgroundView;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStylePlain target:self action:@selector(searchUser:)];
         
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TitleFindFriends.png"]];
-    
-    if ([MFMailComposeViewController canSendMail] || [MFMessageComposeViewController canSendText]) {
-        self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 67)];
-        [self.headerView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundFindFriendsCell.png"]]];
-        UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [clearButton setBackgroundColor:[UIColor clearColor]];
-        [clearButton addTarget:self action:@selector(inviteFriendsButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        [clearButton setFrame:self.headerView.frame];
-        [self.headerView addSubview:clearButton];
-        NSString *inviteString = NSLocalizedString(@"Invite friends", @"Invite friends");
-        CGRect boundingRect = [inviteString boundingRectWithSize:CGSizeMake(310.0f, CGFLOAT_MAX)
-                                                         options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin
-                                                      attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f]}
-                                                         context:nil];
-        CGSize inviteStringSize = boundingRect.size;
-        
-        UILabel *inviteLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, (self.headerView.frame.size.height-inviteStringSize.height)/2, inviteStringSize.width, inviteStringSize.height)];
-        [inviteLabel setText:inviteString];
-        [inviteLabel setFont:[UIFont boldSystemFontOfSize:18]];
-        [inviteLabel setTextColor:[UIColor colorWithRed:87.0f/255.0f green:72.0f/255.0f blue:49.0f/255.0f alpha:1.0]];
-        [inviteLabel setBackgroundColor:[UIColor clearColor]];
-        [self.headerView addSubview:inviteLabel];
-        UIImageView *separatorImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SeparatorTimeline.png"]];
-        [separatorImage setFrame:CGRectMake(0, self.headerView.frame.size.height-2, 320, 2)];
-        [self.headerView addSubview:separatorImage];
-        [self.tableView setTableHeaderView:self.headerView];
-    }
 }
 
 
@@ -117,26 +92,7 @@ typedef enum {
 
 - (PFQuery *)queryForTable {
     // Use cached facebook friend ids
-//    NSArray *facebookFriends = [[PAPCache sharedCache] facebookFriends];
-    
-    // Query for all friends you have on facebook and who are using the app
     PFQuery *friendsQuery = [PFUser query];
-//    [friendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookFriends];
-    
-//    // Query for all Parse employees
-//    NSMutableArray *parseEmployees = [[NSMutableArray alloc] initWithArray:kPAPParseEmployeeAccounts];
-//    [parseEmployees removeObject:[[PFUser currentUser] objectForKey:kPAPUserFacebookIDKey]];
-//    PFQuery *parseEmployeeQuery = [PFUser query];
-//    [parseEmployeeQuery whereKey:kPAPUserFacebookIDKey containedIn:parseEmployees];
-    
-    // Combine the two queries with an OR
-//    PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:friendsQuery, parseEmployeeQuery, nil]];
-//    query.cachePolicy = kPFCachePolicyNetworkOnly;
-//    
-//    if (self.objects.count == 0) {
-//        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-//    }
-//    
     [friendsQuery orderByAscending:kPAPUserDisplayNameKey];
     
     return friendsQuery;
@@ -144,38 +100,6 @@ typedef enum {
 
 - (void)objectsDidLoad:(NSError *)error {
     [super objectsDidLoad:error];
-    
-    PFQuery *isFollowingQuery = [PFQuery queryWithClassName:kPAPActivityClassKey];
-    [isFollowingQuery whereKey:kPAPActivityFromUserKey equalTo:[PFUser currentUser]];
-    [isFollowingQuery whereKey:kPAPActivityTypeKey equalTo:kPAPActivityTypeFollow];
-    [isFollowingQuery whereKey:kPAPActivityToUserKey containedIn:self.objects];
-    [isFollowingQuery setCachePolicy:kPFCachePolicyNetworkOnly];
-    
-    [isFollowingQuery countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-        if (!error) {
-            if (number == self.objects.count) {
-                self.followStatus = PAPFindFriendsFollowingAll;
-                [self configureUnfollowAllButton];
-                for (PFUser *user in self.objects) {
-                    [[PAPCache sharedCache] setFollowStatus:YES user:user];
-                }
-            } else if (number == 0) {
-                self.followStatus = PAPFindFriendsFollowingNone;
-                [self configureFollowAllButton];
-                for (PFUser *user in self.objects) {
-                    [[PAPCache sharedCache] setFollowStatus:NO user:user];
-                }
-            } else {
-                self.followStatus = PAPFindFriendsFollowingSome;
-                [self configureFollowAllButton];
-            }
-        }
-        
-        if (self.objects.count == 0) {
-            self.navigationItem.rightBarButtonItem = nil;
-        }
-    }];
-    
     if (self.objects.count == 0) {
         self.navigationItem.rightBarButtonItem = nil;
     }
@@ -508,6 +432,10 @@ typedef enum {
 - (void)followUsersTimerFired:(NSTimer *)timer {
     [self.tableView reloadData];
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPUtilityUserFollowingChangedNotification object:nil];
+}
+
+- (void)searchUser:(id)sender {
+    
 }
 
 @end
