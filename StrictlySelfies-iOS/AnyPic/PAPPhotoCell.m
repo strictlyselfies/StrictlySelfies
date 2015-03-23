@@ -48,7 +48,7 @@
         [self.contentView addSubview:self.photoButton];
         
         self.deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.deleteButton.frame = CGRectMake(40, 220, 40, 40);
+        self.deleteButton.frame = CGRectMake(40, 220, 20, 20);
         [self.deleteButton setImage:[UIImage imageNamed:@"Delete"] forState:UIControlStateNormal];
         [self.contentView addSubview:self.deleteButton];
         [self.contentView bringSubviewToFront:self.imageView];
