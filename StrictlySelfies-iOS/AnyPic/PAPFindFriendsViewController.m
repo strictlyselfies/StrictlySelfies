@@ -25,6 +25,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *selectedEmailAddress;
 @property (nonatomic, strong) NSMutableDictionary *outstandingFollowQueries;
 @property (nonatomic, strong) NSMutableDictionary *outstandingCountQueries;
+@property (nonatomic, strong) NSString *searchPredicate;
 @end
 
 @implementation PAPFindFriendsViewController
@@ -65,6 +66,8 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.searchPredicate = @"";
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     UIView *texturedBackgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
@@ -91,8 +94,11 @@ typedef enum {
 #pragma mark - PFQueryTableViewController
 
 - (PFQuery *)queryForTable {
-    // Use cached facebook friend ids
     PFQuery *friendsQuery = [PFUser query];
+    if (self.searchPredicate) {
+        NSString* regex = [NSString stringWithFormat:@"(?i)%@", self.searchPredicate];
+        [friendsQuery whereKey:@"displayName" matchesRegex:regex];
+    }
     [friendsQuery orderByAscending:kPAPUserDisplayNameKey];
     
     return friendsQuery;
@@ -435,7 +441,19 @@ typedef enum {
 }
 
 - (void)searchUser:(id)sender {
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter Name" message:@"Please enter the name you would like to find." delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"OK", nil),nil];
+    alert.tag = -1;
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == -1) {
+        if (buttonIndex == 1) {
+            self.searchPredicate = [alertView textFieldAtIndex:0].text;
+            [self loadObjects];
+        }
+    }
 }
 
 @end
