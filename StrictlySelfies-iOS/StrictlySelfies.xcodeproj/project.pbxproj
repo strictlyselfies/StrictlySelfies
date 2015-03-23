@@ -1086,7 +1086,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eeaa36a-a8d6-4131-a789-6dd5dbeb903d";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1112,7 +1112,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eeaa36a-a8d6-4131-a789-6dd5dbeb903d";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1169,7 +1169,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eeaa36a-a8d6-4131-a789-6dd5dbeb903d";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1226,7 +1226,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = StrictlySelfies;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eeaa36a-a8d6-4131-a789-6dd5dbeb903d";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
