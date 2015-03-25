@@ -186,18 +186,18 @@
         self.tableView.tableHeaderView = nil;
         self.tableView.scrollEnabled = YES;
         
-        NSUInteger unreadCount = 0;
-        for (PFObject *activity in self.objects) {
-            if ([lastRefresh compare:[activity createdAt]] == NSOrderedAscending && ![[activity objectForKey:kPAPActivityTypeKey] isEqualToString:kPAPActivityTypeJoined]) {
-                unreadCount++;
-            }
-        }
-        
-        if (unreadCount > 0) {
-            self.navigationController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)unreadCount];
-        } else {
-            self.navigationController.tabBarItem.badgeValue = nil;
-        }
+//        NSUInteger unreadCount = 0;
+//        for (PFObject *activity in self.objects) {
+//            if ([lastRefresh compare:[activity createdAt]] == NSOrderedAscending && ![[activity objectForKey:kPAPActivityTypeKey] isEqualToString:kPAPActivityTypeJoined]) {
+//                unreadCount++;
+//            }
+//        }
+//        
+//        if (unreadCount > 0) {
+//            self.navigationController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)unreadCount];
+//        } else {
+//            self.navigationController.tabBarItem.badgeValue = nil;
+//        }
     }
 }
 
