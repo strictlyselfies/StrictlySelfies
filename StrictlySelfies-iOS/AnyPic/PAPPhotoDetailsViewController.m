@@ -2,9 +2,6 @@
 //  PAPPhotoDetailViewController.m
 //  StrictlySelfies
 //
-//  Created by Mattieu Gamache-Asselin on 5/15/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "PAPPhotoDetailsViewController.h"
 #import "PAPBaseTextCell.h"

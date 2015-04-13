@@ -2,9 +2,6 @@
 //  PAPHomeViewController.m
 //  StrictlySelfies
 //
-//  Created by Héctor Ramos on 5/2/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "PAPHomeViewController.h"
 #import "PAPSettingsActionSheetDelegate.h"

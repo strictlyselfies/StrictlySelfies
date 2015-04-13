@@ -2,9 +2,6 @@
 //  PAPTabBarController.h
 //  StrictlySelfies
 //
-//  Created by Héctor Ramos on 5/15/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "PAPEditPhotoViewController.h"
 

@@ -2,9 +2,6 @@
 //  ShareTableViewController.m
 //  StrictlySelfies
 //
-//  Created by Jeffrey Jackson on 2/10/15.
-//
-//
 
 #import "ShareTableViewController.h"
 #import <Social/Social.h>

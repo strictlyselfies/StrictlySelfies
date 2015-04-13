@@ -2,9 +2,6 @@
 //  PAPPhotoTimelineViewController.m
 //  StrictlySelfies
 //
-//  Created by Héctor Ramos on 5/2/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "PAPPhotoTimelineViewController.h"
 #import "PAPPhotoCell.h"

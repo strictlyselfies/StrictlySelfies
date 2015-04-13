@@ -2,9 +2,6 @@
 //  AppDelegate.m
 //  StrictlySelfies
 //
-//  Created by Héctor Ramos on 5/04/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "AppDelegate.h"
 
@@ -464,12 +461,8 @@
                 PFQuery *facebookFriendsQuery = [PFUser query];
                 [facebookFriendsQuery whereKey:kPAPUserFacebookIDKey containedIn:facebookIds];
                 
-                // auto-follow Parse employees
-                PFQuery *parseEmployeesQuery = [PFUser query];
-                [parseEmployeesQuery whereKey:kPAPUserFacebookIDKey containedIn:kPAPParseEmployeeAccounts];
-                
                 // combined query
-                PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:parseEmployeesQuery,facebookFriendsQuery, nil]];
+                PFQuery *query = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:facebookFriendsQuery, nil]];
                 
                 NSArray *StrictlySelfiesFriends = [query findObjects:&error];
                 

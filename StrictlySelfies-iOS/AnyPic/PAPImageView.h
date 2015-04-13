@@ -2,9 +2,6 @@
 //  PAPImageView.h
 //  StrictlySelfies
 //
-//  Created by Mattieu Gamache-Asselin on 5/14/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 @interface PAPImageView : UIImageView
 

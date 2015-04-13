@@ -2,9 +2,6 @@
 //  PAPPhotoDetailsFooterView.m
 //  StrictlySelfies
 //
-//  Created by Mattieu Gamache-Asselin on 5/16/12.
-//  Copyright (c) 2013 Parse. All rights reserved.
-//
 
 #import "PAPPhotoDetailsFooterView.h"
 #import "PAPUtility.h"
